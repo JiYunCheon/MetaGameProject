@@ -8,7 +8,7 @@ public class Jenkins : MonoBehaviour
 {
     [UnityEditor.MenuItem("MyMenu/Build/ProjectBuild", false, 1)]
 
-    static void PerformBuid()
+    static void PerformBuild()
     {
 
         string curDir = Directory.GetCurrentDirectory() + "\\Build\\";
