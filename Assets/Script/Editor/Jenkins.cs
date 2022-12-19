@@ -13,7 +13,7 @@ public class Jenkins : MonoBehaviour
 
         string curDir = Directory.GetCurrentDirectory() + "\\Build\\";
         string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
-        BuildPipeline.BuildPlayer(scenes, "./Build/Mygame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scenes, "./Build/Mygame.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
 }
