@@ -41,7 +41,7 @@ public class Jenkins
     [UnityEditor.MenuItem("TestBuild/Build/ProjectBuild", false, 1)]
     static void PerformBuild()
     {
-        string target_filename = "/Build/" + APP_NAME + ".exe";
+        string target_filename = APP_NAME + ".exe";
         string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
 
         GenericBuild(scenes, target_filename, BuildTarget.StandaloneWindows64, BuildOptions.None);
