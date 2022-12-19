@@ -10,10 +10,9 @@ public class Jenkins : MonoBehaviour
 
     static void PerformBuild()
     {
-
         string curDir = Directory.GetCurrentDirectory() + "\\Build\\";
         string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
-        BuildPipeline.BuildPlayer(scenes, "./Build/Mygame.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scenes, System.Environment.SpecialFolder.MyDocuments + "./Build/Mygame.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
 }
