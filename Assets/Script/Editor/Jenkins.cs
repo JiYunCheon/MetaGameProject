@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 
-public class MyJenkins : MonoBehaviour
+public class Jenkins : MonoBehaviour
 {
     [UnityEditor.MenuItem("MyMenu/Build/ProjectBuild", false, 1)]
 
-    static void MyPerformBuid()
+    static void PerformBuid()
     {
 
         string curDir = Directory.GetCurrentDirectory() + "\\Build\\";
         string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
-        BuildPipeline.BuildPlayer(scenes, "./Build/mygame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
-
+        BuildPipeline.BuildPlayer(scenes, "./Build/Mygame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 
 }
