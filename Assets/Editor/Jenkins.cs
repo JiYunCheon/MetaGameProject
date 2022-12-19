@@ -41,11 +41,10 @@ public class Jenkins
     [UnityEditor.MenuItem("TestBuild/Build/ProjectBuild", false, 1)]
     static void PerformBuild()
     {
-        string curDir = Directory.GetCurrentDirectory() + "/Build/";
-        string target_filename = curDir + APP_NAME + ".exe";
+        string target_filename = "/Build/" + APP_NAME + ".exe";
         string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
 
-        GenericBuild(scenes, curDir + APP_NAME + ".exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
+        GenericBuild(scenes, target_filename, BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
     static void GenericBuild(string[] scenes, string target_filename, BuildTarget build_target, BuildOptions build_options)
