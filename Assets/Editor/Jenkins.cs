@@ -36,13 +36,13 @@ using System;
 //}
 public class Jenkins
 {
-    static string APP_NAME = "MetaProgramming2";
+    static string APP_NAME = "MetaProgramming_2";
 
-    [UnityEditor.MenuItem("TestBuild/Build/ProjectBuild", false, 1)]
+    [UnityEditor.MenuItem("TestBuild/ProjectBuild", false, 1)]
     static void PerformBuild()
     {
         string target_filename = APP_NAME + ".exe";
-        string[] scenes = UnityEditor.EditorBuildSettingsScene.GetActiveSceneList(UnityEditor.EditorBuildSettings.scenes);
+        string[] scenes = EditorBuildSettingsScene.GetActiveSceneList(EditorBuildSettings.scenes);
 
         GenericBuild(scenes, target_filename, BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
